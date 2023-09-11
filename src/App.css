@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.col-container>div:nth-child(3)>div {
+  border-right: none;
+}
+
+.col-container>div>div:nth-child(3) {
+  border-bottom: none;
+}
