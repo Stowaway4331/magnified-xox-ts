@@ -1,4 +1,4 @@
-export const iconX = () => {
+export const iconX = ({ fill }: { fill?: string }) => {
   return (
     <svg
       clipRule="evenodd"
@@ -6,7 +6,7 @@ export const iconX = () => {
       strokeLinejoin="round"
       strokeMiterlimit="2"
       // stroke="white"
-      fill="white"
+      fill={fill ?? "white"}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -15,7 +15,7 @@ export const iconX = () => {
   );
 };
 
-export const iconO = () => {
+export const iconO = ({ fill }: { fill?: string }) => {
   return (
     <svg
       clipRule="evenodd"
@@ -23,7 +23,7 @@ export const iconO = () => {
       strokeLinejoin="round"
       strokeMiterlimit="2"
       // stroke="white"
-      fill="white"
+      fill={fill ?? "white"}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
