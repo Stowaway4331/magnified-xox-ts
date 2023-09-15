@@ -77,8 +77,8 @@ const Board = ({
         {winnerMatrix[position[0]][position[1]] === undefined
           ? ""
           : winnerMatrix[position[0]][position[1]]
-          ? iconX()
-          : iconO()}
+          ? iconX({ fill: undefined })
+          : iconO({ fill: undefined })}
       </div>
       <div
         className="flex col-container"
@@ -98,7 +98,9 @@ const Board = ({
                     onClick={() => handleClick(r, c)}
                   >
                     {value === undefined ||
-                      (value === true ? iconX() : iconO())}
+                      (value === true
+                        ? iconX({ fill: undefined })
+                        : iconO({ fill: undefined }))}
                   </div>
                 );
               })}
