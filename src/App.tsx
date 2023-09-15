@@ -2,7 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { checkForWin } from "./utils/checkForWin";
 import { generateMatrix } from "./utils/generateMatrix";
-import { iconO, iconX } from "./utils/XO";
+// import { iconO, iconX } from "./utils/XO";
 import Board from "./components/Board";
 import Header from "./components/Header";
 
@@ -30,7 +30,9 @@ function App() {
 
   return (
     <>
-      <Header winnerExists={winnerExists} currPlayer={currPlayer} />
+      {winnerExists === undefined && (
+        <Header winnerExists={winnerExists} currPlayer={currPlayer} />
+      )}
       <div className="flex justify-center col-container">
         {(winnerExists === undefined &&
           bigBoard.map((row, r) => (
@@ -65,7 +67,11 @@ function App() {
               ))}
             </div>
           ))) || (
-          <div>{winnerExists === true ? iconX() : iconO()} is the Winner!!</div>
+          <div>
+            {winnerExists && (
+              <Header winnerExists={winnerExists} currPlayer={currPlayer} />
+            )}
+          </div>
         )}
       </div>
     </>
