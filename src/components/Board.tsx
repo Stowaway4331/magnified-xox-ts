@@ -94,7 +94,7 @@ const Board = ({
                   <div
                     // id="box"
                     key={r}
-                    className={`p-[2px] w-8 h-8 border-white border-r-2 border-b-2 flex justify-center items-center`}
+                    className={`p-[2px] w-8 h-8 border-white border-r-2 border-b-2 flex justify-center items-center hover:bg-green-600`}
                     onClick={() => handleClick(r, c)}
                   >
                     {value === undefined ||
